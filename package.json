@@ -1,11 +1,39 @@
 {
   "name": "bunfire",
+  "version": "0.0.1",
   "module": "index.ts",
+  "description": "A lightweight Bun framework for web development with layouts and routing.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
+  "keywords": [
+    "bun",
+    "framework",
+    "react",
+    "typescript"
+  ],
+  "author": "Your Name freilyn@bernabe.dev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bernabedev/bunfire.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bernabedev/bunfire/issues"
+  },
+  "homepage": "https://github.com/bernabedev/bunfire",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "bin": {
+    "bunfire": "dist/cli.js"
+  },
   "scripts": {
-    "dev": "bun --watch src/index.ts",
-    "start": "bun run src/index.ts",
-    "build": "echo 'Bun does not require build steps as it natively supports TypeScript!'"
+    "dev": "bun --watch src/server.ts",
+    "start": "bun run dist/server.js",
+    "build": "bun build --target=bun src/index.ts --outdir dist && bun build --target=bun src/cli.ts --outdir dist",
+    "prepublish": "bun run build"
   },
   "devDependencies": {
     "@types/bun": "latest",

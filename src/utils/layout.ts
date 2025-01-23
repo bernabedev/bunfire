@@ -1,10 +1,6 @@
 import { readdirSync, statSync } from "fs";
 import { basename, extname, join } from "path";
-
-export interface Layout {
-  path: string;
-  handler: string;
-}
+import type { Layout } from "../types";
 
 export function getLayouts(directory: string): Layout[] {
   const layouts: Layout[] = [];

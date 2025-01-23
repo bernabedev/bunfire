@@ -1,2 +1,6 @@
+[publish]
+access = "public"
+registry = "https://registry.npmjs.org/"
 jsx = "react-jsx"          # Usa el runtime moderno de React
 jsxImportSource = "react"  # Especifica React como el origen de JSX
+
