@@ -1,0 +1,21 @@
+{
+  "name": "bunfire",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "start": "bun run src/index.ts",
+    "build": "echo 'Bun does not require build steps as it natively supports TypeScript!'"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/react-dom": "^19.0.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
